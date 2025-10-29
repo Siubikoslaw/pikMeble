@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pik Meble - Kuchnie na Wymiar i Meble | Opole</title>
+    <meta name="description" content="Pik Meble - Tworzymy kuchnie, szafy i meble na wymiar w Opolu. Doświadcz wysokiej jakości rzemiosła i unikalnych projektów, dopasowanych do Twojego domu.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                font-family: 'Inter', sans-serif; /* Using a modern sans-serif font */
+            }
+        }
+        .vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        /* Custom scrollbar for a touch of elegance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a0522d; /* Sienna color, natural wood tone */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b4513; /* Darker sienna */
+        }
+    </style>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-lg backdrop-blur-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-amber-900 hover:text-amber-700 transition duration-300">Pik Meble</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-lg font-medium text-gray-700 hover:text-amber-900 transition duration-300">O Nas</a>
+                <a href="#services" class="text-lg font-medium text-gray-700 hover:text-amber-900 transition duration-300">Usługi</a>
+                <a href="#portfolio" class="text-lg font-medium text-gray-700 hover:text-amber-900 transition duration-300">Realizacje</a>
+                <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-amber-900 transition duration-300">Kontakt</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <i data-feather="menu" class="text-gray-700"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+            <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-900 transition duration-300">O Nas</a>
+            <a href="#services" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-900 transition duration-300">Usługi</a>
+            <a href="#portfolio" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-900 transition duration-300">Realizacje</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-900 transition duration-300">Kontakt</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative flex items-center justify-center min-h-screen text-white overflow-hidden">
+        <div id="vanta-bg" class="vanta-bg"></div>
+        <div class="relative z-10 text-center px-6 py-12 bg-black bg-opacity-40 rounded-lg shadow-2xl" data-aos="fade-up" data-aos-duration="1200">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Pik Meble</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light italic">Tworzymy Twoją Wizję w Drewnie.</p>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10">Specjalizujemy się w kuchniach na wymiar i meblach, tworzonych z pasją w Opolu.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="bg-amber-700 hover:bg-amber-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Zobacz Nasze Realizacje
+                </a>
+                <a href="#contact" class="border border-white text-white hover:bg-white hover:text-amber-900 font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    Uzyskaj Bezpłatną Wycenę
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-amber-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-900 mb-12" data-aos="fade-down" data-aos-duration="800">O Pik Meble</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="http://static.photos/office/640x360/123" alt="Warsztat Pik Meble" class="rounded-xl shadow-xl border-4 border-amber-200 object-cover w-full h-auto">
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="mb-6">
+                        W <strong class="text-amber-900">Pik Meble</strong>, zlokalizowanym w sercu Opola, wierzymy, że meble to coś więcej niż tylko funkcjonalność – to wyraz Twojego stylu i podstawa Twojego domu. Z wieloletnim doświadczeniem i głęboką pasją do stolarstwa, specjalizujemy się w tworzeniu mebli na wymiar, które doskonale łączą estetykę z użytecznością.
+                    </p>
+                    <p class="mb-6">
+                        Nasza podróż rozpoczęła się od prostej filozofii: dostarczać unikalne projekty i niezrównaną jakość do każdego tworzonego przez nas elementu. Od wyrafinowanych nowoczesnych kuchni po eleganckie szafy na wymiar i charakterystyczne zestawy do salonu – każdy projekt jest świadectwem naszego oddania tradycyjnemu rzemiosłu i innowacyjnemu projektowaniu.
+                    </p>
+                    <p>
+                        Ściśle współpracujemy z naszymi klientami, przekształcając ich pomysły w rzeczywistość. Nasza drobiazgowa dbałość o szczegóły, wybór najwyższej jakości materiałów i zaangażowanie w zadowolenie klienta gwarantują, że każdy mebel z Pik Meble jest stworzony, aby służyć przez lata i być podziwiany przez pokolenia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Usług -->
+    <section id="services" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-900 mb-6" data-aos="fade-down" data-aos-duration="800">Nasze Rzemiosło</h2>
+            <p class="text-xl text-center text-gray-600 mb-12" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">Specjalizujemy się w kuchniach na wymiar i meblach dopasowanych do Twoich potrzeb.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Karta Usługi 1: Kuchnie na Wymiar -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="flex justify-center mb-6">
+                        <img src="http://static.photos/food/640x360/321" alt="Kuchnie na Wymiar" class="rounded-lg shadow-md w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Kuchnie na Wymiar</h3>
+                    <p class="text-gray-700 text-center">Serce każdego domu, zaprojektowane precyzyjnie według Twoich potrzeb kulinarnych i preferencji estetycznych. Nowoczesne, klasyczne czy rustykalne – tworzymy je wszystkie.</p>
+                    <div class="flex justify-center mt-6">
+                        <i data-feather="hard-drive" class="text-amber-600 h-8 w-8"></i>
+                    </div>
+                </div>
+
+                <!-- Karta Usługi 2: Szafy na Wymiar -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="flex justify-center mb-6">
+                        <img src="http://static.photos/indoor/640x360/456" alt="Szafy na Wymiar" class="rounded-lg shadow-md w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Szafy na Wymiar</h3>
+                    <p class="text-gray-700 text-center">Maksymalizuj przestrzeń dzięki szafom na wymiar, dostosowanym rozwiązaniom przechowywania i eleganckim projektom, które uzupełnią Twoją sypialnię.</p>
+                    <div class="flex justify-center mt-6">
+                        <i data-feather="box" class="text-amber-600 h-8 w-8"></i>
+                    </div>
+                </div>
+
+                <!-- Karta Usługi 3: Meble do Salonu -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="flex justify-center mb-6">
+                        <img src="http://static.photos/studio/640x360/789" alt="Meble do Salonu" class="rounded-lg shadow-md w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Meble do Salonu</h3>
+                    <p class="text-gray-700 text-center">Od eleganckich szafek RTV po regały i witryny na wymiar – tworzymy meble, które zwiększają komfort i styl Twojej przestrzeni życiowej.</p>
+                    <div class="flex justify-center mt-6">
+                        <i data-feather="layout" class="text-amber-600 h-8 w-8"></i>
+                    </div>
+                </div>
+
+                <!-- Karta Usługi 4: Meble Łazienkowe -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="flex justify-center mb-6">
+                        <img src="http://static.photos/wellness/640x360/111" alt="Meble Łazienkowe" class="rounded-lg shadow-md w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Meble Łazienkowe</h3>
+                    <p class="text-gray-700 text-center">Funkcjonalne i stylowe szafki łazienkowe, blaty i rozwiązania do przechowywania, zbudowane tak, aby wytrzymać wilgoć i podnieść estetykę Twojej łazienki.</p>
+                    <div class="flex justify-center mt-6">
+                        <i data-feather="droplet" class="text-amber-600 h-8 w-8"></i>
+                    </div>
+                </div>
+
+                <!-- Karta Usługi 5: Meble Biurowe -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="flex justify-center mb-6">
+                        <img src="http://static.photos/workspace/640x360/222" alt="Meble Biurowe" class="rounded-lg shadow-md w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Meble Biurowe</h3>
+                    <p class="text-gray-700 text-center">Stwórz inspirujące i produktywne miejsce pracy dzięki biurkom, regałom i szafom na wymiar do biur domowych lub komercyjnych.</p>
+                    <div class="flex justify-center mt-6">
+                        <i data-feather="briefcase" class="text-amber-600 h-8 w-8"></i>
+                    </div>
+                </div>
+
+                <!-- Karta Usługi 6: Inne Projekty na Wymiar -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100 transform hover:scale-105 transition duration-300 ease-in-out" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+                    <div class="flex justify-center mb-6">
+                        <img src="http://static.photos/craft/640x360/333" alt="Inne Projekty na Wymiar" class="rounded-lg shadow-md w-full h-48 object-cover">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Inne Projekty na Wymiar</h3>
+                    <p class="text-gray-700 text-center">Masz unikalny pomysł? Uwielbiamy wyzwania! Porozmawiajmy o Twojej wizji niestandardowych stołów, drzwi lub innych specjalnych drewnianych kreacji.</p>
+                    <div class="flex justify-center mt-6">
+                        <i data-feather="tool" class="text-amber-600 h-8 w-8"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Realizacje -->
+    <section id="portfolio" class="py-20 md:py-28 bg-gradient-to-br from-amber-50 to-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-900 mb-6" data-aos="fade-down" data-aos-duration="800">Nasze Realizacje</h2>
+            <p class="text-xl text-center text-gray-600 mb-12" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">Wgląd w jakość i design, które dostarczamy.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="http://static.photos/food/640x360/1" alt="Nowoczesna Kuchnia" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <p class="text-white text-xl font-semibold">Nowoczesna Kuchnia</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                    <img src="http://static.photos/indoor/640x360/2" alt="Elegancka Szafa" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <p class="text-white text-xl font-semibold">Elegancka Szafa</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                    <img src="http://static.photos/studio/640x360/3" alt="Szafka RTV na Wymiar" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <p class="text-white text-xl font-semibold">Szafka RTV na Wymiar</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <img src="http://static.photos/food/640x360/4" alt="Minimalistyczna Kuchnia" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <p class="text-white text-xl font-semibold">Minimalistyczna Kuchnia</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                    <img src="http://static.photos/indoor/640x360/5" alt="Wbudowane Półki" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <p class="text-white text-xl font-semibold">Wbudowane Półki</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
+                    <img src="http://static.photos/studio/640x360/6" alt="Unikalny Stół Jadalniany" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <p class="text-white text-xl font-semibold">Unikalny Stół Jadalniany</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Dlaczego Wybrać Nas -->
+    <section id="why-us" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-900 mb-12" data-aos="fade-down" data-aos-duration="800">Dlaczego Wybrać Pik Meble?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Karta Funkcji 1 -->
+                <div class="text-center p-8 rounded-xl shadow-lg border border-gray-100 bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="mb-4 flex justify-center">
+                        <i data-feather="award" class="text-amber-600 h-10 w-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-800 mb-3">Bezkompromisowa Jakość</h3>
+                    <p class="text-gray-700">Używamy tylko najlepszych materiałów i sprawdzonych technik, aby zapewnić trwałe piękno i wytrzymałość.</p>
+                </div>
+                <!-- Karta Funkcji 2 -->
+                <div class="text-center p-8 rounded-xl shadow-lg border border-gray-100 bg-gray-50" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="mb-4 flex justify-center">
+                        <i data-feather="feather" class="text-amber-600 h-10 w-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-800 mb-3">Projektowanie na Wymiar</h3>
+                    <p class="text-gray-700">Każdy mebel jest projektowany na zamówienie i ręcznie wykonany, aby idealnie pasował do Twojej przestrzeni i odzwierciedlał Twój unikalny styl.</p>
+                </div>
+                <!-- Karta Funkcji 3 -->
+                <div class="text-center p-8 rounded-xl shadow-lg border border-gray-100 bg-gray-50" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="mb-4 flex justify-center">
+                        <i data-feather="map-pin" class="text-amber-600 h-10 w-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-800 mb-3">Lokalne Rzemiosło</h3>
+                    <p class="text-gray-700">Z dumą obsługujemy Opole i okolice, oferując lokalną wiedzę i spersonalizowaną obsługę.</p>
+                </div>
+                <!-- Karta Funkcji 4 -->
+                <div class="text-center p-8 rounded-xl shadow-lg border border-gray-100 bg-gray-50" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                    <div class="mb-4 flex justify-center">
+                        <i data-feather="heart" class="text-amber-600 h-10 w-10"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-800 mb-3">Zadowolenie Klienta</h3>
+                    <p class="text-gray-700">Twoja wizja jest naszą misją. Nie jesteśmy zadowoleni, dopóki Ty nie będziesz zachwycony swoimi nowymi meblami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Opinie Klientów -->
+    <section id="testimonials" class="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-amber-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-900 mb-12" data-aos="fade-down" data-aos-duration="800">Co Mówią Nasi Klienci</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Karta Opinii 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-amber-100" data-aos="fade-up" data-aos-duration="1000">
+                    <i data-feather="quote-left" class="text-amber-400 mb-4 h-8 w-8"></i>
+                    <p class="text-gray-700 italic mb-6">"Pik Meble przekształciło naszą kuchnię w arcydzieło! Rzemiosło jest nienaganne, a oni naprawdę słuchali każdej naszej potrzeby. Gorąco polecam!"</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/640x360/101" alt="Klientka 1" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-semibold text-amber-900">Anna K.</p>
+                            <p class="text-gray-500 text-sm">Opole, Polska</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Karta Opinii 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-amber-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <i data-feather="quote-left" class="text-amber-400 mb-4 h-8 w-8"></i>
+                    <p class="text-gray-700 italic mb-6">"Potrzebowaliśmy szafy na wymiar do nietypowej przestrzeni, a Pik Meble przekroczyło nasze oczekiwania. Projekt jest przemyślany, a jakość wybitna."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/640x360/102" alt="Klient 2" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-semibold text-amber-900">Tomasz R.</p>
+                            <p class="text-gray-500 text-sm">Opole, Polska</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Karta Opinii 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border border-amber-100" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <i data-feather="quote-left" class="text-amber-400 mb-4 h-8 w-8"></i>
+                    <p class="text-gray-700 italic mb-6">"Dbałość o szczegóły i spersonalizowana obsługa w Pik Meble były niezwykłe. Nasze nowe szafki do salonu są zarówno piękne, jak i niezwykle funkcjonalne."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/640x360/103" alt="Klientka 3" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-semibold text-amber-900">Ewa S.</p>
+                            <p class="text-gray-500 text-sm">Opole, Polska</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Kontakt -->
+    <section id="contact" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-900 mb-6" data-aos="fade-down" data-aos-duration="800">Uzyskaj Wycenę Mebli na Wymiar</h2>
+            <p class="text-xl text-center text-gray-600 mb-12" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">Porozmawiajmy o Twoim wymarzonym projekcie. Jesteśmy tu, aby pomóc!</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100" data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-6">Dane Kontaktowe</h3>
+                    <div class="space-y-6 text-gray-700 text-lg">
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="text-amber-600 mr-4 h-6 w-6"></i>
+                            <a href="tel:+48123456789" class="hover:text-amber-900 transition duration-300">+48 123 456 789</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="text-amber-600 mr-4 h-6 w-6"></i>
+                            <a href="mailto:info@pikmeble.pl" class="hover:text-amber-900 transition duration-300">info@pikmeble.pl</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="text-amber-600 mr-4 h-6 w-6"></i>
+                            <p>ul. Dębowa 15, 45-001 Opole, Polska</p>
+                        </div>
+                        <div class="flex items-center mt-8">
+                            <a href="#" class="mr-4 text-amber-700 hover:text-amber-900 transition duration-300"><i data-feather="facebook" class="h-8 w-8"></i></a>
+                            <a href="#" class="mr-4 text-amber-700 hover:text-amber-900 transition duration-300"><i data-feather="instagram" class="h-8 w-8"></i></a>
+                            <a href="#" class="text-amber-700 hover:text-amber-900 transition duration-300"><i data-feather="linkedin" class="h-8 w-8"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-amber-100" data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-6">Wyślij Nam Wiadomość</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Twoje Imię</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 p-2.5">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Twój Adres E-mail</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 p-2.5">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Numer Telefonu (Opcjonalnie)</label>
+                            <input type="tel" id="phone" name="phone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 p-2.5">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Twoja Wiadomość</label>
+                            <textarea id="message" name="message" rows="5" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-amber-500 focus:ring-amber-500 p-2.5"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-3 px-6 rounded-md shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                            Wyślij Wiadomość
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="mt-16" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Znajdź Nas na Mapie</h3>
+                <div class="aspect-w-16 aspect-h-9 w-full rounded-xl overflow-hidden shadow-lg border border-amber-100">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.901597873634!2d17.915004715783324!3d50.66920157949642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471044e000000001%3A0x1d7c040d1e0e8e6!2sOpole!5e0!3m2!1sen!2spl!4v1678912345678!5m2!1sen!2spl" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Lokalizacja Pik Meble w Opolu, Polska">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 space-y-4 md:space-y-0">
+                <a href="#home" class="text-2xl font-bold text-amber-500 hover:text-amber-300 transition duration-300">Pik Meble</a>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300"><i data-feather="facebook" class="h-6 w-6"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300"><i data-feather="instagram" class="h-6 w-6"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300"><i data-feather="linkedin" class="h-6 w-6"></i></a>
+                </div>
+            </div>
+            <p class="text-sm">&copy; <span id="current-year"></span> Pik Meble. Wszelkie prawa zastrzeżone. Stworzone z pasją w Opolu.</p>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Whether animation should happen only once - while scrolling down
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            easing: 'ease-out-cubic', // default easing for AOS animations
+        });
+    </script>
+    
+    <!-- Feather Icons JS -->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x9e6c43, // A brownish/amber tone
+            color2: 0x5a3e29, // A darker brownish tone
+            backgroundColor: 0x222222, // Dark background
+            size: 1.00,
+            sphereColor: 0xbe9975, // Lighter sphere color
+            opacity: 0.8 // Adjust opacity if needed
+        });
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Offset for fixed header
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - headerOffset - 20; // Added extra padding
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
